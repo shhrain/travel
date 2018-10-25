@@ -3,7 +3,7 @@
 > A Vue.js project
 
 ## Build Setup
-
+  1rem = html font-size = 50px
 ``` bash
 # install dependencies
 npm install

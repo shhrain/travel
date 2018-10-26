@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of recommendlist" :key="item.id">
           <img class="item-img" :src='item.imgUrl' :alt="item.title">
           <div class="item-info">
             <p class="item-title">{{item.title}}</p>
@@ -16,35 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '10001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/4c/4c3e7f52ffd973b0a3.water.jpg_200x200_65b5a07f.jpg',
-        title: '世界之窗',
-        desc: '一个下午让你走遍全世界~'
-      }, {
-        id: '10002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/22/226c137568f18ac0a3.water.jpg_200x200_81ac3ecf.jpg',
-        title: '深圳欢乐谷',
-        desc: '狂欢无罪，够胆你就来！~'
-      }, {
-        id: '10003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/4c/4c3e7f52ffd973b0a3.water.jpg_200x200_65b5a07f.jpg',
-        title: '世界之窗',
-        desc: '一个下午让你走遍全世界~'
-      }, {
-        id: '10004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/4c/4c3e7f52ffd973b0a3.water.jpg_200x200_65b5a07f.jpg',
-        title: '世界之窗',
-        desc: '一个下午让你走遍全世界~'
-      }, {
-        id: '10005',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1810/4c/4c3e7f52ffd973b0a3.water.jpg_200x200_65b5a07f.jpg',
-        title: '世界之窗',
-        desc: '一个下午让你走遍全世界~'
-      }]
-    }
+  props: {
+    recommendlist: Array
   }
 }
 </script>

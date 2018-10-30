@@ -1,19 +1,24 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1810/4c/4c3e7f52ffd973b0a3.water.jpg_600x330_487dd289.jpg" alt="万圣节">
+      <img class="banner-img" :src="bannerImg" alt="万圣节">
       <div class="banner-info">
-        <div class="banner-title">世界之窗(AAAAA景区)</div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number"><span class="iconfont banner-icon">&#xe692;</span>39</div>
       </div>
     </div>
-    <component-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></component-gallary>
+    <component-gallary :imgs="bannerImgs" v-show="showGallary" @close="handleGallaryClose"></component-gallary>
   </div>
 </template>
 <script>
 import ComponentGallary from 'components/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   data () {
     return {
       imgs: ['http://img1.qunarzz.com/sight/p0/1509/68/682dc0fa681a451d.water.jpg_r_800x800_06ee6464.jpg', 'http://img1.qunarzz.com/sight/p0/1601/12/124c976a879ad31a90.water.jpg_r_800x800_af1d4c9a.jpg'],
